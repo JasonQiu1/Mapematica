@@ -1,0 +1,732 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     34380,        724]
+NotebookOptionsPosition[     30637,        649]
+NotebookOutlinePosition[     31278,        673]
+CellTagsIndexPosition[     31235,        670]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Cs/Math 371 Kessler/Wang \nExpectations for the final \
+project report\nSpring 2019",
+ FontSize->36]], "Section",
+ CellChangeTimes->{
+  3.7011663067307625`*^9, {3.702199179982527*^9, 3.7021991823575754`*^9}, {
+   3.7340827850871353`*^9, 3.7340827854616003`*^9}, {3.7649282261466455`*^9, 
+   3.7649282264435234`*^9}},
+ TextAlignment->Center,ExpressionUUID->"5d54389f-a661-43a8-a0ea-3ba69fae21ed"],
+
+Cell[CellGroupData[{
+
+Cell["Purpose  & general information", "Subsubsection",
+ CellChangeTimes->{{3.576169481409629*^9, 3.5761694933316455`*^9}, {
+  3.5761718156889133`*^9, 3.576171817218915*^9}, {3.5761719429750924`*^9, 
+  3.5761719541571083`*^9}}],
+
+Cell[TextData[{
+ "Your project report must describe ",
+ StyleBox["your project",
+  FontWeight->"Bold"],
+ " (the one you finished, not the one you proposed) as outlined below. This \
+should be written as a stand-alone document \[Dash] that means someone not \
+familiar with your project and your work (that is, someone who has not read \
+prior progress reports) should be able to read and understand this report."
+}], "Text",
+ CellChangeTimes->{{3.5761690868990726`*^9, 3.5761690916900797`*^9}, {
+  3.5761691481771593`*^9, 3.576169191912221*^9}, {3.702360343999694*^9, 
+  3.702360364283719*^9}},ExpressionUUID->"3572a612-bba8-4fc5-82f0-\
+1f2dc2daa5ec"],
+
+Cell[TextData[{
+ "The final report is mainly a description of ",
+ StyleBox["what ",
+  FontWeight->"Bold"],
+ "you have done and ",
+ StyleBox["how",
+  FontWeight->"Bold"],
+ " your code solves all aspects of your project, together with other \
+information we need to understand your approach.  We need to judge how well \
+your (electronic) project solves the problem you set out to solve.  For that, \
+you need to tell us\n\t* what your project is \n\t* what you had to learn \
+about before you could get started (research info)\n\t* how you represent \
+data/information in your program or in files (files/folders and data \
+structures)\n\t* how you put things together (overview, relationship of \
+functions and their purposes) \n\t* if you ",
+ StyleBox["used code which was developed by someone else. ",
+  FontWeight->"Bold"],
+ "\n\t* how to execute your code and \n\t* how we can see and be impressed \
+with the breadth the depth of your completed project."
+}], "Text",
+ CellChangeTimes->{{3.5761715616365557`*^9, 3.5761717268777885`*^9}, {
+  3.576171872564993*^9, 3.576172065712265*^9}, {3.5761721153773346`*^9, 
+  3.5761722259504905`*^9}, {3.5761724634028244`*^9, 3.5761725331809225`*^9}, {
+  3.639758583190733*^9, 3.6397586014439163`*^9}, {3.639759956538712*^9, 
+  3.6397599840429873`*^9}, {3.6397600782879314`*^9, 3.6397600816179647`*^9}, {
+  3.6397626979137707`*^9, 3.639762722007113*^9}, {3.7023603820478153`*^9, 
+  3.702360397255148*^9}}],
+
+Cell[TextData[{
+ StyleBox["Grading",
+  FontWeight->"Bold"],
+ ": \nAs already specified with the original project guidelines, the final \
+project report will be graded using the following criteria.\n\t\[Bullet] \
+Progress, overcoming obstacles, and project completion\n\t\[Bullet] \
+Difficulty of the project\n\t\[Bullet] Quality of the general solution:  \
+design\n\t\[Bullet] Quality of the specific solution:  implementation with \
+efficient code\n\t\[Bullet] Documentation provided with the solution\n"
+}], "Text",
+ CellChangeTimes->{{3.57617336291009*^9, 3.5761733790721126`*^9}, {
+  3.576173418847169*^9, 3.57617346262323*^9}, {3.5761736853815436`*^9, 
+  3.576173693592555*^9}, {3.702199258918051*^9, 3.702199279987457*^9}, {
+  3.702360416351226*^9, 3.702360427382845*^9}}],
+
+Cell[TextData[{
+ "Turn in an ",
+ StyleBox["electronic-copy",
+  FontWeight->"Bold"],
+ " in Blackboard before 10:30am, Thursday, May 9th.\n"
+}], "Subsubsection",
+ CellChangeTimes->{
+  3.6397629757405577`*^9, 3.670863288838883*^9, {3.702199076209324*^9, 
+   3.7021990888967695`*^9}, {3.702360433070756*^9, 3.702360449542163*^9}, {
+   3.734082816181117*^9, 3.7340828309072666`*^9}, {3.7341724775180187`*^9, 
+   3.734172519764243*^9}, {3.764928328445139*^9, 3.764928334829074*^9}, {
+   3.765490795919092*^9, 
+   3.765490804744219*^9}},ExpressionUUID->"021b2279-0404-4432-b9dc-\
+ff0afea6d1b0"],
+
+Cell[TextData[{
+ "The electronic submission needs to include ",
+ StyleBox["all",
+  FontWeight->"Bold"],
+ " the supporting files (if we cannot run your project because you did not \
+submit all the needed files, your grade will reflect that you turned in a \
+non-working project), code, and an electronic version of your actual report. \
+The PowerPoint slide needs to be submitted in the \
+\[OpenCurlyDoubleQuote]Final Project Presentation\[CloseCurlyDoubleQuote] \
+link.  The code should be organized using ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "\[CloseCurlyQuote]s cell structure, so it\[CloseCurlyQuote]s easy find your \
+way around all of your code."
+}], "Text",
+ CellChangeTimes->{{3.5761690868990726`*^9, 3.5761690916900797`*^9}, {
+   3.5761691481771593`*^9, 3.5761692473992996`*^9}, {3.576169281103347*^9, 
+   3.5761693298304157`*^9}, 3.57616944673558*^9, {3.57617351932931*^9, 
+   3.576173522320314*^9}, {3.576236894564386*^9, 3.576236894885376*^9}, {
+   3.6397586150050516`*^9, 3.6397586381702843`*^9}, {3.639760843446735*^9, 
+   3.639760874791606*^9}, {3.639762497010083*^9, 3.639762519343528*^9}, {
+   3.639762957514825*^9, 3.6397629593249083`*^9}, {3.702360462749976*^9, 
+   3.702360502474243*^9}, {3.734082852489605*^9, 3.7340828530512447`*^9}, {
+   3.734082996208886*^9, 3.7340830215403614`*^9}, 3.7341725545437207`*^9, {
+   3.7655331720106487`*^9, 3.7655331998130555`*^9}, 
+   3.7655333865695972`*^9},ExpressionUUID->"93bddd63-10bd-4b13-9579-\
+3bca9651fd89"],
+
+Cell[TextData[{
+ "Make sure you ",
+ StyleBox["follow the instructions",
+  FontWeight->"Bold"],
+ " in part 1 below to ensure that ",
+ StyleBox["we can run the code without problems on a PC and a Mac",
+  FontWeight->"Bold"],
+ ".  ",
+ StyleBox["You may want to test this out on someone else\[CloseCurlyQuote]s \
+computer.  ",
+  FontWeight->"Bold"],
+ "As before, put all your files in a folder and then zip up the folder.  The \
+file name of the folder ",
+ StyleBox["and",
+  FontWeight->"Bold"],
+ " the name of the zipped file must contain your last names.  Do not turn in \
+a folder (or file) called finalreport (or finalreport.zip).  Something like \
+KesslerWangfinalreport.zip is acceptable. "
+}], "Text",
+ CellChangeTimes->{{3.5761690868990726`*^9, 3.5761690916900797`*^9}, {
+  3.5761691481771593`*^9, 3.5761692473992996`*^9}, {3.576169281103347*^9, 
+  3.5761693265204105`*^9}, {3.576169359334457*^9, 3.5761694398145704`*^9}, {
+  3.639759841328558*^9, 3.6397598414685593`*^9}, {3.670863335884117*^9, 
+  3.6708633370597878`*^9}, {3.670863432008625*^9, 3.670863452215129*^9}, {
+  3.7021991125186243`*^9, 3.7021991223996143`*^9}, {3.7021993510302258`*^9, 
+  3.702199359516789*^9}, {3.70236054196122*^9, 3.7023606467360783`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Description of content ", "Subsubsection",
+ CellChangeTimes->{{3.576169481409629*^9, 3.5761695240056887`*^9}, 
+   3.57617354770335*^9}],
+
+Cell[TextData[{
+ "There are ",
+ StyleBox["10 required pieces",
+  FontWeight->"Bold"],
+ " for this project report. Please address all in the order and with the \
+label (= number) given below.  If some items of parts 3, 4 or 5 do not apply \
+to you, then you need to still address them and explain why they do not \
+apply.   Only the signed statements may be turned in separately.  The entire \
+report should be typed, including the algorithms."
+}], "Text",
+ CellChangeTimes->{{3.576169533506702*^9, 3.5761695951647887`*^9}, 
+   3.576173549993353*^9, {3.5762652574955006`*^9, 3.5762652584355383`*^9}, {
+   3.639760002015167*^9, 3.6397600056262035`*^9}, {3.639760531341713*^9, 
+   3.639760535909713*^9}, {3.702360671295377*^9, 3.702360693830181*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "1) An ",
+ StyleBox["explanation of how to get your code to run and user manual",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.576173733737612*^9, 3.576173745690628*^9}, {
+   3.5761737858156853`*^9, 3.5761738155407267`*^9}, 3.639759863862784*^9, {
+   3.765530749339297*^9, 
+   3.7655307537526984`*^9}},ExpressionUUID->"978f71f3-fe17-4cad-ac01-\
+db4dd63659aa"],
+
+Cell[TextData[{
+ "Provide an explanation of ",
+ StyleBox["how to get your code to run",
+  FontWeight->"Bold"],
+ " and what it shows (e.g. \"Evaluate the notebook Whatsitsname.nb, and then \
+execute the function call PlayGame[ ] at the end of the Mathematica file. You \
+will see.... \").  Make sure that you (electronically) ",
+ StyleBox["include code to demo all major parts of your program",
+  FontWeight->"Bold"],
+ " and include how we can start/see those demos as part of this section of \
+your report. Remember that you need to make sure that we can run the code \
+effortlessly.\n\nProvide a ",
+ StyleBox["user manual (or user instructions)",
+  FontWeight->"Bold"],
+ " to tell us how to interact with your interface if any.\n\nIf there are",
+ StyleBox[" several notebooks",
+  FontWeight->"Bold"],
+ ", make sure you specify which one to evaluate or in which order they need \
+to be evaluated. \[NonBreakingSpace]If you know that ",
+ StyleBox["your code will take a long time to run",
+  FontWeight->"Bold"],
+ ", make sure you mention this here.  If you know there are errors that cause \
+an infinite loop or a crash, state that in part 8.\n\nIf you give us",
+ StyleBox[" wrong instructions ",
+  FontWeight->"Bold"],
+ "you will ",
+ StyleBox["lose up to 10% of the report grade, ",
+  FontWeight->"Bold"],
+ "even if we somehow figure out what the correct instructions would've been.  \
+If we cannot figure out how to run your project, then your report cannot earn \
+more than 50%."
+}], "Text",
+ CellChangeTimes->{{3.5761726138120365`*^9, 3.576172772251259*^9}, {
+   3.576172816106321*^9, 3.576172889374424*^9}, {3.5761729374694915`*^9, 
+   3.5761730228196115`*^9}, {3.576173832762751*^9, 3.5761738330327516`*^9}, 
+   3.576264308884801*^9, {3.608501003728326*^9, 3.6085010247213554`*^9}, {
+   3.639760037931527*^9, 3.6397600568737164`*^9}, {3.639760103651185*^9, 
+   3.6397601308954577`*^9}, {3.639760164310713*^9, 3.639760373734713*^9}, {
+   3.6397625798936377`*^9, 3.639762587349131*^9}, {3.6397627866285763`*^9, 
+   3.639762800535137*^9}, 3.670863482445991*^9, {3.702360718666478*^9, 
+   3.702360791711853*^9}, {3.7023608794565763`*^9, 3.70236088257655*^9}, 
+   3.734087934883326*^9, {3.7340879700241537`*^9, 3.734087972411364*^9}, {
+   3.7654909289278116`*^9, 3.7654909446596475`*^9}, {3.7654911477211957`*^9, 
+   3.765491230381407*^9}, {3.7655304526360846`*^9, 
+   3.765530466414764*^9}},ExpressionUUID->"2da88bc3-8eda-4c19-8e55-\
+8271947d3d8f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "2) A ",
+ StyleBox["detailed description",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.576173733737612*^9, 3.576173745690628*^9}, {
+  3.6397598668228135`*^9, 3.639759866872814*^9}}],
+
+Cell[TextData[{
+ "Provide a ",
+ StyleBox["detailed description",
+  FontWeight->"Bold"],
+ " of your project (not your proposal, but your actual project).  It must \
+satisfy the original requirements for the project proposal.  It must be in \
+complete sentences, start with a description, and include enough detail so \
+that someone who does not know about your project understands what the \
+project accomplishes. It must include\n\t\[Bullet] several screen shots of \
+what can be seen on screen;\n\t\[Bullet] explanations of the screen shot (s) \
+as needed;\n\t\[Bullet] explanations and examples of how a user influences \
+what happens.\nNote: The screen shots mentioned above should actually be \
+screen shots taken from your running project."
+}], "Text",
+ CellChangeTimes->{{3.576169633469843*^9, 3.576169665603888*^9}, {
+  3.576173551953356*^9, 3.576173553003357*^9}, {3.576173749110633*^9, 
+  3.576173749680634*^9}, {3.576264248817709*^9, 3.5762642780608006`*^9}, {
+  3.608463993070176*^9, 3.6084639990867777`*^9}, {3.702360806799464*^9, 
+  3.702360847861923*^9}, {3.7340880132717857`*^9, 
+  3.734088016533574*^9}},ExpressionUUID->"c8d5ce72-dcac-4dfe-b315-\
+01adf8e01baa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "3) An ",
+ StyleBox["explanation of  algorithms/formulas",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.576173733737612*^9, 3.576173745690628*^9}, 
+   3.5761737858156853`*^9, 3.5761742273863063`*^9, {3.639759869143837*^9, 
+   3.6397598692138376`*^9}},ExpressionUUID->"8b8f4404-bb75-4879-9aa6-\
+8e8708c0fdb1"],
+
+Cell[TextData[{
+ "Provide an ",
+ StyleBox["explanation of algorithms/formulas which are the result of \
+research & development",
+  FontWeight->"Bold"],
+ ".  A number of projects are using theoretical models, algorithms, and \
+formulas (Examples:  determining the movement of a DNA fragment in a gel, the \
+movement of planets and stars, the strategy for an AI for whatever game you \
+are developing, the way rational tangles are drawn, music theory you are \
+using, the flight path of an object, etc.) which needed to first be \
+researched or studied or developed.  Include one or more examples in your \
+explanations that make it easier for us to follow your description.  Make \
+sure you use your own words in your explanation.  Provide a reference for it \
+(and if you have an electronic copy of the reference, please include it with \
+the material you submit electronically).   \n\nThis part needs to be written \
+so that someone not familiar with your project can read and understand it.\n\
+Often it is best to walk us through an explicit example (using \
+numbers/locations or whatever) to demonstrate how your algorithm works.  \
+Algorithms should be explained in full sentences, and you may include a \
+description in pseudo-code, but do not turn in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " code for this section. \n\nSome projects are not research based.  If your \
+project did not require any \[OpenCurlyDoubleQuote]outside\
+\[CloseCurlyDoubleQuote] research, then state that. "
+}], "Text",
+ CellChangeTimes->{{3.5761700042343645`*^9, 3.576170006954368*^9}, {
+  3.5761737876156874`*^9, 3.5761737882156887`*^9}, {3.6084906900821943`*^9, 
+  3.6084908538952875`*^9}, {3.639760418659713*^9, 3.6397604662067127`*^9}, {
+  3.670863525892502*^9, 3.670863597969469*^9}, {3.702360866553637*^9, 
+  3.702360873368589*^9}, {3.7023609070448093`*^9, 3.702360929795189*^9}, {
+  3.702360965707612*^9, 
+  3.702361011701777*^9}},ExpressionUUID->"c14a0590-0ed8-41bd-9aea-\
+819b936729aa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "4) A ",
+ StyleBox["description of",
+  FontWeight->"Bold"],
+ " ",
+ StyleBox["any files and/or file structure",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.576173733737612*^9, 3.576173745690628*^9}, 
+   3.5761737858156853`*^9, 3.5761739452199097`*^9, {3.639759871523861*^9, 
+   3.639759871543861*^9}},ExpressionUUID->"0043c7d2-18bd-497d-bfce-\
+fce2577f9cb9"],
+
+Cell[TextData[{
+ "Provide a description of ",
+ StyleBox["any files and/or file structure",
+  FontWeight->"Bold"],
+ " your project uses.  This refers to how you arrange your code or the data \
+external to your code.  Be specific about what information is stored where \
+and why.  Make sure that when your program reads and writes files, the names \
+of the files are given relative to your project folder.  Also provide an \
+explanation of the format of the information in the file, preferably with a \
+short example.  Some projects use no files, others use many.  If your project \
+does not use any, then state that. "
+}], "Text",
+ CellChangeTimes->{{3.5716798578751945`*^9, 3.5716800001677065`*^9}, {
+   3.5716800867940683`*^9, 3.5716801078230033`*^9}, {3.571680143378236*^9, 
+   3.5716801751556396`*^9}, {3.5716802219881907`*^9, 
+   3.5716802322533197`*^9}, {3.5716802727532177`*^9, 
+   3.5716803228308225`*^9}, {3.571680393068274*^9, 3.571680497701507*^9}, {
+   3.571680561257722*^9, 3.5716805628489428`*^9}, {3.571680661147803*^9, 
+   3.5716806829724827`*^9}, {3.5716812431172357`*^9, 3.571681245051648*^9}, {
+   3.5716814230443983`*^9, 3.5716816429796085`*^9}, {3.571706451733644*^9, 
+   3.571706453212888*^9}, {3.5717064905025043`*^9, 3.5717065465035667`*^9}, {
+   3.571706577233614*^9, 3.571706682340929*^9}, {3.571706801023093*^9, 
+   3.571706907117741*^9}, {3.571707275625595*^9, 3.571707283113366*^9}, 
+   3.571707316327454*^9, 3.571745702831825*^9, 3.571745735535825*^9, {
+   3.575583606805044*^9, 3.5755836084541383`*^9}, {3.576169181302206*^9, 
+   3.5761691869712143`*^9}, 3.5761695101536694`*^9, 3.5761695608107405`*^9, 
+   3.5761696269288335`*^9, 3.576169676324903*^9, {3.5761697129189544`*^9, 
+   3.5761698933702083`*^9}, {3.576169926724255*^9, 3.5761699717193184`*^9}, {
+   3.5761700327574043`*^9, 3.576170062971447*^9}, {3.576170095095492*^9, 
+   3.576170124189533*^9}, {3.5761701735046024`*^9, 3.5761702809127536`*^9}, {
+   3.576170320297809*^9, 3.57617037775389*^9}, {3.576170529113103*^9, 
+   3.5761705892921877`*^9}, {3.5761707625434313`*^9, 3.576171082777882*^9}, 
+   3.576173564335373*^9, {3.576173946979912*^9, 3.576173947579913*^9}, {
+   3.608490873266125*^9, 3.6084908746670413`*^9}, {3.70236101559717*^9, 
+   3.702361061078454*^9}, {3.7663612225132785`*^9, 
+   3.7663612251134186`*^9}},ExpressionUUID->"f59005e7-956c-4949-a60f-\
+925949b46c29"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "5) A ",
+ StyleBox["description of any major data structures",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.576173733737612*^9, 3.576173745690628*^9}, 
+   3.5761737858156853`*^9, {3.5761739302578883`*^9, 3.576173937858899*^9}, {
+   3.6397598740438857`*^9, 
+   3.6397598741838875`*^9}},ExpressionUUID->"295515c7-4348-4d13-8e32-\
+8680a31419f4"],
+
+Cell[TextData[{
+ "Provide a description of",
+ StyleBox[" any major data structures (lists, etc.) your project uses",
+  FontWeight->"Bold"],
+ ".  This refers to how you arrange the data in your code.  Be specific about \
+",
+ StyleBox["what",
+  FontWeight->"Bold"],
+ " information is stored and ",
+ StyleBox["how",
+  FontWeight->"Bold"],
+ " the information is stored, and specify the variable ",
+ StyleBox["name",
+  FontWeight->"Bold"],
+ " associated with the data structure (e.g. \[OpenCurlyDoubleQuote]blocklist\
+\[CloseCurlyDoubleQuote]).  For the ",
+ StyleBox["how",
+  FontWeight->"Bold"],
+ ", describe the structure of the list (e.g. \[OpenCurlyDoubleQuote]a list of \
+pairs of points, where each pair specified the lower left and upper right \
+corner of a black surface in cubeworld . . .\[CloseCurlyDoubleQuote]).  An \
+example might be helpful (e.g. copy it from your code and write an \
+explanation).  Some projects use no data structures, while others use many.  \
+If your project does not use any, then state that. "
+}], "Text",
+ CellChangeTimes->{{3.5716798578751945`*^9, 3.5716800001677065`*^9}, {
+   3.5716800867940683`*^9, 3.5716801078230033`*^9}, {3.571680143378236*^9, 
+   3.5716801751556396`*^9}, {3.5716802219881907`*^9, 
+   3.5716802322533197`*^9}, {3.5716802727532177`*^9, 
+   3.5716803228308225`*^9}, {3.571680393068274*^9, 3.571680497701507*^9}, {
+   3.571680561257722*^9, 3.5716805628489428`*^9}, {3.571680661147803*^9, 
+   3.5716806829724827`*^9}, {3.5716812431172357`*^9, 3.571681245051648*^9}, {
+   3.5716814230443983`*^9, 3.5716816429796085`*^9}, {3.571706451733644*^9, 
+   3.571706453212888*^9}, {3.5717064905025043`*^9, 3.5717065465035667`*^9}, {
+   3.571706577233614*^9, 3.571706682340929*^9}, {3.571706801023093*^9, 
+   3.571706907117741*^9}, {3.571707275625595*^9, 3.571707283113366*^9}, 
+   3.571707316327454*^9, 3.571745702831825*^9, 3.571745735535825*^9, {
+   3.575583606805044*^9, 3.5755836084541383`*^9}, {3.576169181302206*^9, 
+   3.5761691869712143`*^9}, 3.5761695101536694`*^9, 3.5761695608107405`*^9, 
+   3.5761696269288335`*^9, 3.576169676324903*^9, {3.5761697129189544`*^9, 
+   3.5761698933702083`*^9}, {3.576169926724255*^9, 3.5761699717193184`*^9}, {
+   3.5761700327574043`*^9, 3.576170062971447*^9}, {3.576170095095492*^9, 
+   3.576170124189533*^9}, {3.5761701735046024`*^9, 3.5761702809127536`*^9}, {
+   3.576170320297809*^9, 3.57617037775389*^9}, {3.576170529113103*^9, 
+   3.5761705892921877`*^9}, {3.5761707625434313`*^9, 3.576171090718893*^9}, {
+   3.576173939309901*^9, 3.5761739396399016`*^9}, {3.6084909137696953`*^9, 
+   3.608490983083537*^9}, {3.639760586998713*^9, 3.639760656255713*^9}, {
+   3.702361066078313*^9, 
+   3.7023612029309673`*^9}},ExpressionUUID->"9b4614a1-788e-4cc7-ae7e-\
+acf409efbe62"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "6) An",
+ StyleBox[" overview of how your code approaches the problem ",
+  FontWeight->"Bold"],
+ "(with list of functions and their info)"
+}], "Text",
+ CellChangeTimes->{{3.576173733737612*^9, 3.576173745690628*^9}, 
+   3.5761737858156853`*^9, {3.57617390322585*^9, 3.576173920096874*^9}, {
+   3.6397598774049196`*^9, 3.6397598775049205`*^9}}],
+
+Cell[TextData[{
+ "Provide an",
+ StyleBox[" overview of how your code approaches the problem",
+  FontWeight->"Bold"],
+ ".  This should be written in complete sentences and be written so that it \
+can be understood without knowing anything else about your project other than \
+the detailed description from parts 2, 4, and 5.  You must include a ",
+ StyleBox["bulleted list",
+  FontWeight->"Bold"],
+ " of the i",
+ StyleBox["mportant functions",
+  FontWeight->"Bold"],
+ " you wrote.  (Note: There are very few reasons for your code not to be in \
+the form of functions - even if some functions only initialize global \
+variables.)  For each function specify\n\t* its purpose\n\t* the \
+input/information it requires (parameters, global variables, user input)\n\t* \
+the output/information it generates (return values, changes on screen and to \
+global variables)\n\t* a short description of its algorithm\nNote: \
+unimportant functions are functions which are trivial and don\
+\[CloseCurlyQuote]t need to be mentioned. If you have LOTS of important \
+functions, then use good judgment on what to include. "
+}], "Text",
+ CellChangeTimes->{{3.5716798578751945`*^9, 3.5716800001677065`*^9}, {
+   3.5716800867940683`*^9, 3.5716801078230033`*^9}, {3.571680143378236*^9, 
+   3.5716801751556396`*^9}, {3.5716802219881907`*^9, 
+   3.5716802322533197`*^9}, {3.5716802727532177`*^9, 
+   3.5716803228308225`*^9}, {3.571680393068274*^9, 3.571680497701507*^9}, {
+   3.571680561257722*^9, 3.5716805628489428`*^9}, {3.571680661147803*^9, 
+   3.5716806829724827`*^9}, {3.5716812431172357`*^9, 3.571681245051648*^9}, {
+   3.5716814230443983`*^9, 3.5716816429796085`*^9}, {3.571706451733644*^9, 
+   3.571706453212888*^9}, {3.5717064905025043`*^9, 3.5717065465035667`*^9}, {
+   3.571706577233614*^9, 3.571706682340929*^9}, {3.571706801023093*^9, 
+   3.571706907117741*^9}, {3.571707275625595*^9, 3.571707283113366*^9}, 
+   3.571707316327454*^9, 3.571745702831825*^9, 3.571745735535825*^9, {
+   3.575583606805044*^9, 3.5755836084541383`*^9}, {3.576169181302206*^9, 
+   3.5761691869712143`*^9}, 3.5761695101536694`*^9, 3.5761695608107405`*^9, 
+   3.5761696269288335`*^9, 3.576169676324903*^9, {3.5761697129189544`*^9, 
+   3.5761698933702083`*^9}, {3.576169926724255*^9, 3.5761699717193184`*^9}, {
+   3.5761700327574043`*^9, 3.576170062971447*^9}, {3.576170095095492*^9, 
+   3.576170124189533*^9}, {3.5761701735046024`*^9, 3.5761702809127536`*^9}, {
+   3.576170320297809*^9, 3.57617037775389*^9}, {3.576170529113103*^9, 
+   3.5761705892921877`*^9}, {3.5761707625434313`*^9, 3.576171060444851*^9}, {
+   3.5761710936498976`*^9, 3.576171099099905*^9}, {3.5761736064804325`*^9, 
+   3.5761736152414446`*^9}, {3.5761739046358523`*^9, 3.576173905095853*^9}, {
+   3.6084910074250765`*^9, 3.6084910341364737`*^9}, {3.608491092620965*^9, 
+   3.608491119603346*^9}, {3.6085008504571104`*^9, 3.6085008794321513`*^9}, {
+   3.6397606751547127`*^9, 3.639760683025713*^9}, {3.7023612075063963`*^9, 
+   3.702361254626128*^9}},ExpressionUUID->"d6e20028-d54e-487a-a51b-\
+12fde0f185e8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "7) An ",
+ StyleBox["explanation of externally used code",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.576173733737612*^9, 3.576173745690628*^9}, 
+   3.5761737858156853`*^9, {3.576173845194769*^9, 3.5761738540257807`*^9}, 
+   3.5761741322031727`*^9, {3.6397598801859474`*^9, 3.6397598803959494`*^9}, 
+   3.734088136711751*^9},ExpressionUUID->"50d71566-0208-4068-a717-\
+c9cf4ef702b1"],
+
+Cell["\<\
+If you have included code from the internet, friends, the book, or \
+Blackboard, you need to clearly state this in this section.  If you wrote all \
+your code on your own, then state that as the answer to this item.  Provide \
+the reference where you found it and clearly state what the code you used \
+accomplishes.  If you found code and modified it to fit your purposes, \
+clearly state that, too (also with reference, of course).  Make sure it is \
+clear to us how much of the original code is actually used and how much is \
+your work.  (If you found code that helped you learn about something for your \
+project, you need to include that as references in part 9.)\
+\>", "Text",
+ CellChangeTimes->{{3.5761710620458527`*^9, 3.5761710646658564`*^9}, {
+  3.576171109161919*^9, 3.5761711097319202`*^9}, {3.576171142584966*^9, 
+  3.5761712112530627`*^9}, {3.576173851115777*^9, 3.5761738918238344`*^9}, {
+  3.6085009092661934`*^9, 3.608500959372264*^9}, {3.702361279099025*^9, 
+  3.702361320930318*^9}, {3.7655332885591764`*^9, 
+  3.765533288918492*^9}},ExpressionUUID->"26c9a9ac-fb7e-49c9-93dd-\
+699159185367"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "8) A ",
+ StyleBox["description of the limitations",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.576173733737612*^9, 3.576173745690628*^9}, 
+   3.5761737858156853`*^9, 3.576173821171735*^9, {3.6397598825959716`*^9, 
+   3.6397598827859735`*^9}}],
+
+Cell[TextData[{
+ "Provide a",
+ StyleBox[" description of the limitations ",
+  FontWeight->"Bold"],
+ "of your code, i.e for what kind of inputs does it work and for what kind \
+does it not work (if there are such cases).  Include any known bugs of your \
+program in this section.  It is better for you to be upfront about what \
+doesn't work, rather than letting us find out.  You ",
+ StyleBox["may",
+  FontWeight->"Bold"],
+ " also include in this part of your project report a description about the \
+difficulties you had in finding solutions and developing the code.  However, \
+you must also make sure that your description is accurate and consistent with \
+our experiences with you seeking help from us.  "
+}], "Text",
+ CellChangeTimes->{{3.576171213074065*^9, 3.5761713193582153`*^9}, {
+   3.5761714107483435`*^9, 3.5761714351703777`*^9}, 3.5761736183414493`*^9, {
+   3.5761738352137547`*^9, 3.576173835603755*^9}, {3.702361327610506*^9, 
+   3.7023613711437893`*^9}},ExpressionUUID->"fb30aaef-aa81-4d75-9c9e-\
+f72b3beabbaf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "9) A ",
+ StyleBox["list of references",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.576173733737612*^9, 3.576173745690628*^9}, {
+  3.5761737858156853`*^9, 3.5761738155407267`*^9}, {3.5761740078969975`*^9, 
+  3.57617401633801*^9}, {3.57617413738418*^9, 3.576174141144185*^9}}],
+
+Cell["\<\
+Provide any significant references you used to learn about issues related to \
+your project and/or how to approach it (other than the Documentation Center).\
+\>", "Text",
+ CellChangeTimes->{{3.576173053022654*^9, 3.5761730670546737`*^9}, {
+  3.5761739989259853`*^9, 3.5761739991959853`*^9}, {3.639760775370615*^9, 
+  3.639760775690647*^9}, {3.7023613784791517`*^9, 3.70236138158304*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "10) A ",
+ StyleBox["signed statement",
+  FontWeight->"Bold"],
+ " from each group member "
+}], "Text",
+ CellChangeTimes->{{3.576173733737612*^9, 3.576173745690628*^9}, {
+  3.5761737858156853`*^9, 3.5761738155407267`*^9}, {3.5761740185290127`*^9, 
+  3.5761740267500243`*^9}, {3.6084639636872387`*^9, 3.6084639663925085`*^9}}],
+
+Cell[TextData[{
+ "Provide a ",
+ StyleBox["signed stateme",
+  FontWeight->"Bold"],
+ "nt from each group member (separate statement/page for each member) with a ",
+ StyleBox["clear",
+  FontWeight->"Bold"],
+ " description (qualitative and quantitative) of the contributions s/he made \
+to the project.  The description should clearly establish ",
+ StyleBox["what",
+  FontWeight->"Bold"],
+ " was contributed and the ",
+ StyleBox["level",
+  FontWeight->"Bold"],
+ " of contribution.  Signed statements may be turned in independently of the \
+project report as in the past."
+}], "Text",
+ CellChangeTimes->{{3.5716798578751945`*^9, 3.5716800001677065`*^9}, {
+   3.5716800867940683`*^9, 3.5716801078230033`*^9}, {3.571680143378236*^9, 
+   3.5716801751556396`*^9}, {3.5716802219881907`*^9, 
+   3.5716802322533197`*^9}, {3.5716802727532177`*^9, 
+   3.5716803228308225`*^9}, {3.571680393068274*^9, 3.571680497701507*^9}, {
+   3.571680561257722*^9, 3.5716805628489428`*^9}, {3.571680661147803*^9, 
+   3.5716806829724827`*^9}, {3.5716812431172357`*^9, 3.571681245051648*^9}, {
+   3.5716814230443983`*^9, 3.5716816429796085`*^9}, {3.571706451733644*^9, 
+   3.571706453212888*^9}, {3.5717064905025043`*^9, 3.5717065465035667`*^9}, {
+   3.571706577233614*^9, 3.571706682340929*^9}, {3.571706801023093*^9, 
+   3.571706907117741*^9}, {3.571707275625595*^9, 3.571707283113366*^9}, 
+   3.571707316327454*^9, 3.571745702831825*^9, 3.571745735535825*^9, {
+   3.575583606805044*^9, 3.5755836084541383`*^9}, {3.576169181302206*^9, 
+   3.5761691869712143`*^9}, 3.5761695101536694`*^9, 3.5761695608107405`*^9, 
+   3.5761696269288335`*^9, 3.576169676324903*^9, {3.5761697129189544`*^9, 
+   3.5761698933702083`*^9}, {3.576169926724255*^9, 3.5761699717193184`*^9}, {
+   3.5761700327574043`*^9, 3.5761700343474064`*^9}, {3.5761700662614517`*^9, 
+   3.576170069262456*^9}, 3.5761721084863253`*^9, 3.576172963072528*^9, 
+   3.5761730415816383`*^9, {3.576173095107713*^9, 3.5761731491347895`*^9}, {
+   3.5761740277700253`*^9, 3.576174028180026*^9}, {3.608501096070456*^9, 
+   3.6085010984204593`*^9}, {3.639762638026497*^9, 3.6397626427303123`*^9}, {
+   3.702361394166885*^9, 3.702361404222694*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+CellGrouping->Manual,
+WindowSize->{927, 1028},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{612, 792}},
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.5, 1.5 Inherited],
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 419, 7, 257, "Section",ExpressionUUID->"5d54389f-a661-43a8-a0ea-3ba69fae21ed"],
+Cell[CellGroupData[{
+Cell[1001, 31, 227, 3, 53, "Subsubsection",ExpressionUUID->"bfa45d05-d790-4041-b54c-2ffa0c7f919a"],
+Cell[1231, 36, 651, 12, 86, "Text",ExpressionUUID->"3572a612-bba8-4fc5-82f0-1f2dc2daa5ec"],
+Cell[1885, 50, 1445, 26, 320, "Text",ExpressionUUID->"3ddb74a3-3f2b-477d-a902-cd19ee930782"],
+Cell[3333, 78, 778, 13, 287, "Text",ExpressionUUID->"441a0812-3cef-42e5-8efe-e8f1a52cbee5"],
+Cell[4114, 93, 587, 13, 106, "Subsubsection",ExpressionUUID->"021b2279-0404-4432-b9dc-ff0afea6d1b0"],
+Cell[4704, 108, 1486, 26, 111, "Text",ExpressionUUID->"93bddd63-10bd-4b13-9579-3bca9651fd89"],
+Cell[6193, 136, 1225, 25, 119, "Text",ExpressionUUID->"212b8724-aa65-437f-985d-e0be5c5ad6a7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7455, 166, 141, 2, 67, "Subsubsection",ExpressionUUID->"0559f4ce-a135-4d06-bbb2-25e2ff40ac97"],
+Cell[7599, 170, 747, 13, 119, "Text",ExpressionUUID->"c6dc5b94-1397-440f-9e4b-dd256f196bd4"],
+Cell[CellGroupData[{
+Cell[8371, 187, 387, 9, 52, "Text",ExpressionUUID->"978f71f3-fe17-4cad-ac01-db4dd63659aa"],
+Cell[8761, 198, 2449, 45, 387, "Text",ExpressionUUID->"2da88bc3-8eda-4c19-8e55-8271947d3d8f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11247, 248, 210, 6, 52, "Text",ExpressionUUID->"c8da4e28-0422-47ae-ae9a-8b454c9ea93b"],
+Cell[11460, 256, 1177, 20, 253, "Text",ExpressionUUID->"c8d5ce72-dcac-4dfe-b315-01adf8e01baa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12674, 281, 336, 8, 52, "Text",ExpressionUUID->"8b8f4404-bb75-4879-9aa6-8e8708c0fdb1"],
+Cell[13013, 291, 1990, 33, 387, "Text",ExpressionUUID->"c14a0590-0ed8-41bd-9aea-819b936729aa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15040, 329, 386, 11, 52, "Text",ExpressionUUID->"0043c7d2-18bd-497d-bfce-fce2577f9cb9"],
+Cell[15429, 342, 2370, 36, 153, "Text",ExpressionUUID->"f59005e7-956c-4949-a60f-925949b46c29"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17836, 383, 370, 9, 52, "Text",ExpressionUUID->"295515c7-4348-4d13-8e32-8680a31419f4"],
+Cell[18209, 394, 2757, 49, 153, "Text",ExpressionUUID->"9b4614a1-788e-4cc7-ae7e-acf409efbe62"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21003, 448, 360, 8, 86, "Text",ExpressionUUID->"f6baa3d5-9c80-4de1-8a17-735b4fcdd193"],
+Cell[21366, 458, 3041, 48, 555, "Text",ExpressionUUID->"d6e20028-d54e-487a-a51b-12fde0f185e8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24444, 511, 412, 9, 52, "Text",ExpressionUUID->"50d71566-0208-4068-a717-c9cf4ef702b1"],
+Cell[24859, 522, 1121, 17, 320, "Text",ExpressionUUID->"26c9a9ac-fb7e-49c9-93dd-699159185367"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26017, 544, 273, 7, 52, "Text",ExpressionUUID->"92371c1a-6fce-4c84-a3bf-c579eb6ad4b3"],
+Cell[26293, 553, 1028, 19, 287, "Text",ExpressionUUID->"fb30aaef-aa81-4d75-9c9e-f72b3beabbaf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27358, 577, 305, 7, 52, "Text",ExpressionUUID->"322929cb-4aba-44b2-ab10-d2395d68f794"],
+Cell[27666, 586, 397, 6, 86, "Text",ExpressionUUID->"af803647-a8b4-4e27-a52f-1a7a30aaacd0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28100, 597, 341, 8, 52, "Text",ExpressionUUID->"ab970e49-aff4-4f5c-a7b7-89ff55c1878c"],
+Cell[28444, 607, 2165, 38, 220, "Text",ExpressionUUID->"7f9cf5a9-dbc5-4285-96dc-190f04aa684f"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

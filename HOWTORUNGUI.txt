@@ -1,0 +1,6 @@
+The GUI.nb contains answers to question #3 (scroll to bottom)
+
+How to Run:
+Use evaluate notebook option under evaluation tab.
+
+to rerun the code run the cell that only calls startingMenu[] (very last cell in coding section)
